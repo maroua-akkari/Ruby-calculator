@@ -61,25 +61,18 @@ if calc_type == "c"
     end
 end
 
+
 if calc_type == "d"
-  puts "Would you like to calculate (t) journey time or (p) journey price"
-  journey_calc = gets.chomp
-  if journey_calc == "t"
-    puts "Enter your distance"
-    distance = gets.chomp
-    puts "Enter your speed"
-    speed = gets.chomp
-    time = distance/speed
-    puts time
-  end
-  if journey_calc == "p"
-    puts "Enter your distance"
+  puts "You are now using the journey time and price calculator"
+    puts "Enter your distance (miles)"
     distance = gets.chomp.to_f
+    puts "Enter your speed (MPH)"
+    speed = gets.chomp.to_f
+    time = distance/speed
     puts "Enter your fuel efficiency(mpg)"
     fuel_eff = gets.chomp.to_f
-    puts "Enter your cost per gallon"
+    puts "Enter your cost per gallon(£)"
     cost_per_g = gets.chomp.to_f
     price = ((distance / fuel_eff)*cost_per_g)
-    puts "£ #{price}"
+    puts "Your journey will cost £#{price} and take #{time} hours"
   end
-end
