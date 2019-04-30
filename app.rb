@@ -75,4 +75,4 @@ if calc_type == "d"
     cost_per_g = gets.chomp.to_f
     price = ((distance / fuel_eff)*cost_per_g)
     puts "Your journey will cost £#{price} and take #{time} hours"
-  end
+end
