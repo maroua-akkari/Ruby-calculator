@@ -2,7 +2,7 @@ puts "Enter your name"
 name = gets.chomp
 puts "Hello " + name + " use this sparta calculator"
 
-puts "Which calculator would you like to use (a) advanced or (b) basic?"
+puts "Which calculator would you like to use (a) advanced or (b) basic or (c) BMI?"
 calc_type = gets.chomp
 if calc_type == "a"
   puts "You are now using the advanced calculator, would you like to use the (s)square root or (p)power to"
@@ -34,5 +34,16 @@ if calc_type == "b"
   puts "Enter your second number"
   second_number = gets.chomp
   calculation = "#{first_number} #{operator} #{second_number} = #{eval(s_first_number + operator + second_number)}"
+  puts calculation
+end
+
+if calc_type == "c"
+  puts "You are now using the BMI calculator"
+  puts "Enter your height in cm"
+  height = gets.chomp.to_f
+  height_in_ms = ((height/100) ** 2)
+  puts "Enter your weight in kg"
+  weight = gets.chomp.to_f
+  calculation = weight/height_in_ms
   puts calculation
 end
