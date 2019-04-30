@@ -2,7 +2,7 @@ puts "Enter your name"
 name = gets.chomp
 puts "Hello " + name + " use this sparta calculator"
 
-puts "Which calculator would you like to use (a) advanced or (b) basic or (c) BMI?"
+puts "Which calculator would you like to use (a) advanced or (b) basic or (c) BMI or (d) trip?"
 calc_type = gets.chomp
 if calc_type == "a"
   puts "You are now using the advanced calculator, would you like to use the (s)square root or (p)power to"
@@ -59,4 +59,27 @@ if calc_type == "c"
       calculation = (weight/height_in_inches)*703
       puts calculation
     end
+end
+
+if calc_type == "d"
+  puts "Would you like to calculate (t) journey time or (p) journey price"
+  journey_calc = gets.chomp
+  if journey_calc == "t"
+    puts "Enter your distance"
+    distance = gets.chomp
+    puts "Enter your speed"
+    speed = gets.chomp
+    time = distance/speed
+    puts time
+  end
+  if journey_calc == "p"
+    puts "Enter your distance"
+    distance = gets.chomp.to_f
+    puts "Enter your fuel efficiency(mpg)"
+    fuel_eff = gets.chomp.to_f
+    puts "Enter your cost per gallon"
+    cost_per_g = gets.chomp.to_f
+    price = ((distance / fuel_eff)*cost_per_g)
+    puts "£ #{price}"
+  end
 end
