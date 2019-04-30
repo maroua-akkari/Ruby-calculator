@@ -39,11 +39,24 @@ end
 
 if calc_type == "c"
   puts "You are now using the BMI calculator"
-  puts "Enter your height in cm"
-  height = gets.chomp.to_f
-  height_in_ms = ((height/100) ** 2)
-  puts "Enter your weight in kg"
-  weight = gets.chomp.to_f
-  calculation = weight/height_in_ms
-  puts calculation
+  puts "Enter measuring units (m) metric or (i) imperial"
+  units = gets.chomp
+    if units == "m"
+      puts "Enter your height in cm"
+      height_cm = gets.chomp.to_f
+      height_in_ms = ((height_cm/100) ** 2)
+      puts "Enter your weight in kg"
+      weight = gets.chomp.to_f
+      calculation = weight/height_in_ms
+      puts calculation
+    end
+    if units == "i"
+      puts "Enter your height in inches"
+      height_i = gets.chomp.to_f
+      height_in_inches = (height_i** 2)
+      puts "Enter your weight in pounds"
+      weight = gets.chomp.to_f
+      calculation = (weight/height_in_inches)*703
+      puts calculation
+    end
 end
