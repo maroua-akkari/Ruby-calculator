@@ -1,1 +1,1 @@
-# Ruby-calculator
+# Sparta Ruby Calculator
